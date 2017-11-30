@@ -1,0 +1,40 @@
+<!--
+    Relative paths assume component is being run from inside an app or another component, where dependencies are flat
+    siblings. When this component is run from its own repo (e.g. tests, examples), we assume the server is started with
+    'gulp serve' (or similar server setup) to enable correct finding of bower dependencies for local runs.
+-->
+<link rel="import" href="../polymer/polymer.html"/>
+<link rel="import" href="../px-d3-imports/px-d3-imports.html">
+<link rel="import" href="css/og-sparkline-styles.html">
+
+<!--
+REPLACE THIS TEXT WITH A COMPONENT DESCRIPTION
+
+### Usage
+
+<og-sparkline
+  width="125"
+  height="75"
+  line-width="3"
+  line-color="#e9a24b"
+  axis-color="#677e8c"
+  axis-width="1.5"
+  cursor-position-radius="4"
+  cursor-position-color="red"
+  cursor-position='[2,2]'
+  data='[[1,1],[2,2],[3,4],[4,2],[5,5]]'>
+</og-sparkline>
+
+@element og-sparkline
+@blurb REPLACE THIS TEXT WITH A COMPONENT DESCRIPTION
+@homepage index.html
+@demo index.html
+-->
+
+<dom-module id="og-sparkline">
+  <template>
+    <style include="og-sparkline-styles"></style>
+    <div id="chartArea"></div>
+  </template>
+</dom-module>
+<script src="dist/og-sparkline.js"></script>
